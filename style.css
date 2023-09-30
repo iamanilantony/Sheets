@@ -25,6 +25,14 @@ body {
     display: flex;
 }
 
+.vertical-separator {
+    width: 1px;
+    height: 100%;
+    background-color: #ccc;
+    display: inline-block;
+    margin: 0 5px;
+}
+
 .sheet-title {
     margin-left: .5rem;
     font-size: large;
@@ -41,12 +49,15 @@ body {
 }
 
 .page-action {
-    margin: 0.5rem;
+    margin: 0.3rem;
     cursor: pointer;
+    padding: 5px;
+    border-radius: 5px;
+    transition: 0.3s;
 }
 
 .page-action:hover {
-    background-color: rgb(208, 208, 208);
+    background-color: rgba(222, 222, 222, 0.74);
 }
 
 .cellprop-actions-cont {
@@ -65,8 +76,15 @@ body {
     display: inline-block;
     font-weight: 100;
     font-size: small;
-    margin-right: 1rem;
+    margin-right: 0.7rem;
+    border-radius: 5px;
+    cursor: pointer;
 }
+
+.cellprop-actions-cont>*:hover {
+    background-color: rgba(222, 222, 222, 0.74);
+}
+
 
 .font-family-prop {
     padding: 0.2rem;
@@ -83,8 +101,28 @@ body {
 }
 
 .formula-action-cont {
-    background-color: rgb(10, 64, 46);
     height: 3rem;
+    display: flex;
+    padding-left: 1rem;
+    align-items: center;
+    background-color: rgb(250, 250, 250);
+    margin-left: 1rem;
+    margin-right: 1rem;
+
+}
+
+.formula-action {
+    height: 1.5rem;
+    width: calc(100vw - 1rem - 7rem);
+    border: none;
+}
+
+.data-cell {
+    height: 1.5rem;
+    border: none;
+    background-color: white;
+    width: 4rem;
+    border-radius: 5px;
 }
 
 .grid-cont {
@@ -93,8 +131,29 @@ body {
 }
 
 .sheet-action-cont {
-    background-color: rgb(126, 126, 126);
+    background-color: #eff3fa;
+    /* margin-left: 1rem; */
+    /* margin-right: 1rem; */
     height: 3rem;
+    display: flex;
+    align-items: center;
+    padding-left: 2rem;
+}
+
+.sheet-action-cont>* {
+    margin: 1rem;
+}
+
+.sheet-count {
+    background-color: rgb(203, 230, 255);
+    padding: 0.4rem;
+    /* border-radius: 10px; */
+    color: #0b57d0;
+    font-weight: 500;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    height: 2rem;
 }
 
 .material-symbols-outlined {
@@ -103,4 +162,8 @@ body {
         'wght' 300,
         'GRAD' 0,
         'opsz' 20
+}
+
+.dummy-cell {
+    background-color: gray;
 }
