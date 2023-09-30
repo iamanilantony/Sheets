@@ -126,8 +126,9 @@ body {
 }
 
 .grid-cont {
-    background-color: rgb(255, 255, 255);
     height: calc(100vh - 3rem - 3rem - 3rem - 3.8rem);
+    position: relative;
+    overflow: scroll;
 }
 
 .sheet-action-cont {
@@ -164,6 +165,56 @@ body {
         'opsz' 20
 }
 
-.dummy-cell {
-    background-color: gray;
+.top-left-dummy-box {
+    /* background-color: gray; */
+    height: 1.5rem;
+    width: 2rem;
+}
+
+
+.address-col {
+    height: 1.5rem;
+    width: 2rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #dfe4ea;
+    font-size: 0.7rem;
+}
+
+.address-row-cont {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 2rem;
+}
+
+.cells-cont {
+    display: flex;
+    flex-direction: column;
+}
+
+.address-row {
+    height: 1.5rem;
+    width: 6rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #dfe4ea;
+    font-size: 0.7rem;
+}
+
+.row-cont {
+    display: flex;
+    /* position: absolute; */
+    top: 0;
+    left: 2rem;
+}
+
+.cell {
+    height: 2rem;
+    width: 6rem;
+    border: 1px solid #dfe4ea;
 }
