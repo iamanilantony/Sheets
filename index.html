@@ -42,15 +42,7 @@
             <span class="material-symbols-outlined">undo</span>
             <span class="material-symbols-outlined">redo</span>
             <span class="material-symbols-outlined">print</span>
-            <select class="font-family-prop">
-                <option value="">100%</option>
-                <option value="">90%</option>
-                <option value="">80%</option>
-                <option value="">70%</option>
-                <option value="">60%</option>
-                <option value="">50%</option>
-                <option value="">40%</option>
-            </select>
+
             <span class="vertical-separator"></span>
             <span class="material-symbols-outlined">attach_money</span>
             <span class="material-symbols-outlined">percent</span>
@@ -59,37 +51,49 @@
             <span class="material-symbols-outlined">123</span>
             <span class="vertical-separator"></span>
             <select class="font-family-prop">
-                <option value="">Monospace</option>
-                <option value="">Monospace</option>
-                <option value="">Monospace</option>
-                <option value="">Monospace</option>
-                <option value="">Monospace</option>
-                <option value="">Monospace</option>
+                <option value="Roboto">Roboto</option>
+                <option value="Monospace">Monospace</option>
+                <option value="Courier New">Courier New</option>
+                <option value="Courier">Courier</option>
+                <option value="Cambria">Cambria</option>
+                <option value="Cochin">Cochin</option>
+                <option value="Georgia">Georgia</option>
+                <option value="Times">Times</option>
+                <option value="Times New Roman">Times New Roman</option>
+                <option value="serif">serif</option>
             </select>
             <span class="vertical-separator"></span>
-            <span class="material-symbols-outlined">format_bold</span>
-            <span class="material-symbols-outlined">format_italic</span>
-            <span class="material-symbols-outlined">strikethrough_s</span>
+            <span class="material-symbols-outlined bold">format_bold</span>
+            <span class="material-symbols-outlined italic">format_italic</span>
+            <span class="material-symbols-outlined underline">format_underlined</span>
             <span class="material-symbols-outlined">text_increase</span>
+            <select class="font-size-prop">
+                <option value="24" selected>24px</option>
+                <option value="20">20px</option>
+                <option value="16">16px</option>
+                <option value="14">14px</option>
+                <option value="12">12px</option>
+                <option value="10">10px</option>
+                <option value="8">8px</option>
+            </select>
             <span class="material-symbols-outlined">text_decrease</span>
             <div class="color-picker">
                 <span class="material-symbols-outlined">format_color_text</span>
-                <input type="color" class="color-picker-text" />
+                <input type="color" class="color-picker-text font-color" />
             </div>
             <div class="color-picker">
-                <span class="material-symbols-outlined">format_color_fill</span>
-                <input type="color" class="color-picker-text" />
+                <span class="material-symbols-outlined background-color">format_color_fill</span>
+                <input type="color" class="BGcolor-prop" />
             </div>
             <span class="material-symbols-outlined">window</span>
             <span class="vertical-separator"></span>
-            <span class="material-symbols-outlined"> format_align_left</span>
-            <span class="material-symbols-outlined">format_align_center</span>
-            <span class="material-symbols-outlined">format_align_right</span>
-            <span class="material-symbols-outlined">format_align_justify</span>
+            <span class="left f-alignment material-symbols-outlined"> format_align_left</span>
+            <span class="center f-alignment material-symbols-outlined">format_align_center</span>
+            <span class="right f-alignment material-symbols-outlined">format_align_right</span>
             <span class="vertical-separator"></span>
-            <span class="material-symbols-outlined">vertical_align_top</span>
-            <span class="material-symbols-outlined">vertical_align_bottom</span>
-            <span class="material-symbols-outlined">vertical_align_center</span>
+            <span class="top v-alignment material-symbols-outlined">vertical_align_top</span>
+            <span class="bottom v-alignment material-symbols-outlined">vertical_align_bottom</span>
+            <span class="center v-alignment material-symbols-outlined">vertical_align_center</span>
             <span class="material-symbols-outlined">format_text_wrap</span>
             <span class="material-symbols-outlined">link</span>
             <span class="material-symbols-outlined">analytics</span>
@@ -120,6 +124,7 @@
     </div>
 
 </body>
-<script src="script.js"></script>
+<script src="grid.js"></script>
+<script src="cell-properties.js"></script>
 
 </html>

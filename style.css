@@ -231,7 +231,8 @@ body {
     position: relative;
 }
 
-.color-picker-text {
+.color-picker-text,
+.BGcolor-prop {
     position: absolute;
     cursor: pointer;
     opacity: 0%;
