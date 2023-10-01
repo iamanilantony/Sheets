@@ -24,7 +24,19 @@ for (let i = 0; i < rows; i++) {
   for (let j = 0; j < cols; j++) {
     let cell = document.createElement("div");
     cell.setAttribute("class", "cell");
+    cell.setAttribute("contenteditable", "true");
     rowCont.appendChild(cell);
+    addListenerForAddressBarDisplay(cell, i, j);
   }
   cellsCont.appendChild(rowCont);
+}
+
+let addressBar = document.querySelector(".data-cell");
+
+function addListenerForAddressBarDisplay(cell, i, j) {
+  cell.addEventListener("click", e => {
+    let rowId = i + 1;
+    let colId = String.fromCharCode(65 + j);
+    addressBar.value = `${colId}-${rowId}`;
+  });
 }
