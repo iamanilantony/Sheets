@@ -33,7 +33,7 @@ for (let i = 0; i < rows; i++) {
   cellsCont.appendChild(rowCont);
 }
 
-let addressBar = document.querySelector(".data-cell");
+const addressBar = document.querySelector(".data-cell");
 
 function addListenerForAddressBarDisplay(cell, i, j) {
   cell.addEventListener("click", e => {

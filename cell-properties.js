@@ -16,7 +16,8 @@ for (let i = 0; i < rows; i++) {
       fontColor: "black",
       bgColor: "black",
       value: "",
-      formula: ""
+      formula: "",
+      children: []
     });
   }
   sheetDB.push(sheetRow);
@@ -39,6 +40,7 @@ const valignment = document.querySelectorAll(".v-alignment");
 const vtopalign = falignment[0];
 const vbottomalign = falignment[1];
 const vcenteralign = falignment[2];
+const formulaBar = document.querySelector(".formula-action");
 
 const activeColorProp = "#d1d8e0";
 const inactiveColorProp = "#ecf0f1";
@@ -172,9 +174,10 @@ function addListenerToAttachCellProperties(cell) {
     const address = addressBar.value;
     const [rid, cid] = decodeRIDCIDFromAddress(address);
     const cellProp = sheetDB[rid][cid];
+    console.log(cellProp);
 
     // Apply cell Properties
-    cell.style.fontWeight = cellProp.font ? "bold" : "normal";
+    cell.style.fontWeight = cellProp.bold ? "bold" : "normal";
     cell.style.fontStyle = cellProp.italic ? "italic" : "normal";
     cell.style.textDecoration = cellProp.underline ? "underline" : "none";
     cell.style.fontSize = cellProp.fontSize + "px";
@@ -215,6 +218,8 @@ function addListenerToAttachCellProperties(cell) {
         vbottomalign.style.backgroundColor = activeColorProp;
         break;
     }
+    formulaBar.value = cellProp.formula;
+    cell.innerText = cellProp.value;
   });
 }
 
